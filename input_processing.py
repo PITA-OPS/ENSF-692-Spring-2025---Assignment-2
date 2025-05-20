@@ -50,9 +50,9 @@ def print_message(sensor):
 
     if sensor.traffic_light == "red" or sensor.pedestrian == "yes" or sensor.vehicle == "yes":
         print("STOP")
-    elif sensor.traffic_light == "yellow" and sensor.pedestrian == "no" or sensor.vehicle == "no":
+    elif sensor.traffic_light == "yellow" and (sensor.pedestrian == "no" or sensor.vehicle == "no"):
         print("Caution")
-    elif sensor.traffic_light == "green" and sensor.pedestrian == "no" or sensor.vehicle == "no":
+    elif sensor.traffic_light == "green" and (sensor.pedestrian == "no" or sensor.vehicle == "no"):
         print("Proceed")
 
     print("\n--- Current Sensor Status ---")
